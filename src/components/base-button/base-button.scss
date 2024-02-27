@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.root {
+	background-color: red;
+	font-size: 69;
+	padding: 1rem 2rem;
+	border-radius: 2px;
+	color: $white;
+	border: 1px solid transparent;
+	cursor: pointer;
+
+	&.has-rounded-corners {
+		border-radius: 10px;
+	}
+
+	&:hover {
+		border: 1px solid black;
+	}
+}
