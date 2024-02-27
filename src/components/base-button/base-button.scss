@@ -1,7 +1,9 @@
 @import '../../styles/variables.scss';
 
+$background-color: var(--bg-color);
+
 .root {
-	background-color: red;
+	background-color: $background-color;
 	font-size: 69;
 	padding: 1rem 2rem;
 	border-radius: 2px;

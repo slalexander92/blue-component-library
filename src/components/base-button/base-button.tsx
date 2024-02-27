@@ -10,10 +10,11 @@ export class BaseButton {
   @Prop() text: string = 'Hello World';
 	@Prop() hasRoundedCorners: boolean = false;
 	@Prop() color: string = 'Red';
+	@Prop() isDisabled: boolean = false;
 
   render() {
     return (
-			<button class={['root', this.hasRoundedCorners ? 'has-rounded-corners' : ''].join(' ')} style={{'background-color': this.color}}>
+			<button class={['root', this.hasRoundedCorners ? 'has-rounded-corners' : ''].join(' ')} style={{'--bg-color': this.color}} disabled={this.isDisabled}>
 				{ this.text }
 			</button>
 		);
