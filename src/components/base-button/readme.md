@@ -11,6 +11,7 @@
 | ------------------- | --------------------- | ----------- | --------- | --------------- |
 | `color`             | `color`               |             | `string`  | `'Red'`         |
 | `hasRoundedCorners` | `has-rounded-corners` |             | `boolean` | `false`         |
+| `isDisabled`        | `is-disabled`         |             | `boolean` | `false`         |
 | `text`              | `text`                |             | `string`  | `'Hello World'` |
 
 

@@ -3,8 +3,8 @@ export default {
 	tags: ['autodocs'],
 }
 
-const DefaultTemplate = args => {
-	return `<base-button text="${args.text}" color="${args.color}" has-rounded-corners="${args.hasRoundedCorners}" />`;
+const DefaultTemplate = ({ text, color, hasRoundedCorners, isDisabled }) => {
+	return `<base-button text="${text}" color="${color}" has-rounded-corners="${hasRoundedCorners}" is-disabled="${isDisabled}" />`;
 }
 
 export const Default = DefaultTemplate.bind({});
@@ -12,4 +12,5 @@ Default.args = {
 	text: 'Hello World',
 	color: 'red',
 	hasRoundedCorners: true,
+	isDisabled: false,
 }

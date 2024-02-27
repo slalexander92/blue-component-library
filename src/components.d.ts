@@ -9,6 +9,7 @@ export namespace Components {
     interface BaseButton {
         "color": string;
         "hasRoundedCorners": boolean;
+        "isDisabled": boolean;
         "text": string;
     }
     interface BaseIcon {
@@ -58,6 +59,7 @@ declare namespace LocalJSX {
     interface BaseButton {
         "color"?: string;
         "hasRoundedCorners"?: boolean;
+        "isDisabled"?: boolean;
         "text"?: string;
     }
     interface BaseIcon {
