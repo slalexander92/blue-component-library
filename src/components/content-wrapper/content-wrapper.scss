@@ -1,7 +1,8 @@
 .root {
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #69BEEF;
+	background-color: rgb(8, 69, 8);
+	color: white;
 
 	&.constraint-small {
 		max-width: 768px;
