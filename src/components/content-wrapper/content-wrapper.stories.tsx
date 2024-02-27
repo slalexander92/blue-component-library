@@ -17,12 +17,13 @@ export default {
   },
 }
 
-const DefaultTemplate = args => {
+const DefaultTemplate = ({ constraintSize, paddingSize }) => {
 	return `
-		<content-wrapper constraint-size="${args.constraintSize}" padding-size="${args.paddingSize}">
-			<div style="display: flex; justify-content: center">
-				<h1>Hello I am some content in the slot</h1>
-			</div?
+		<content-wrapper constraint-size="${constraintSize}" padding-size="${paddingSize}">
+			<div style="display: flex; flex-direction: column; align-items: center">
+				<h1>Hello, I am some content in the slot</h1>
+				<h2>Hello, I am a sub-heading in the slot</h2>
+			</div>
 		</content-wrapper>
 	`;
 }
