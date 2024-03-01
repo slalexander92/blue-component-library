@@ -15,6 +15,19 @@
 | `text`              | `text`                |             | `string`  | `'Hello World'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [multiple-components-playing-together](../mulitple-components-playing-together)
+
+### Graph
+```mermaid
+graph TD;
+  multiple-components-playing-together --> base-button
+  style base-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
