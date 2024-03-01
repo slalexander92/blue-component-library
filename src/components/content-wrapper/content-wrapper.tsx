@@ -7,8 +7,8 @@ import { Component, Prop, h } from '@stencil/core';
 })
 
 export class ContentWrapper {
-	@Prop() constraintSize: string;
-	@Prop() paddingSize: string;
+	@Prop() constraintSize: string = 'small';
+	@Prop() paddingSize: string = 'small';
 
 	getConstraintSize() {
 		return `constraint-${this.constraintSize}`;
