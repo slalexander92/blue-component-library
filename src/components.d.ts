@@ -22,6 +22,14 @@ export namespace Components {
         "constraintSize": string;
         "paddingSize": string;
     }
+    interface MultipleComponentsPlayingTogether {
+        "color": string;
+        "constraintSize": string;
+        "hasRoundedCorners": boolean;
+        "isDisabled": boolean;
+        "paddingSize": string;
+        "text": string;
+    }
 }
 declare global {
     interface HTMLBaseButtonElement extends Components.BaseButton, HTMLStencilElement {
@@ -48,11 +56,18 @@ declare global {
         prototype: HTMLContentWrapperElement;
         new (): HTMLContentWrapperElement;
     };
+    interface HTMLMultipleComponentsPlayingTogetherElement extends Components.MultipleComponentsPlayingTogether, HTMLStencilElement {
+    }
+    var HTMLMultipleComponentsPlayingTogetherElement: {
+        prototype: HTMLMultipleComponentsPlayingTogetherElement;
+        new (): HTMLMultipleComponentsPlayingTogetherElement;
+    };
     interface HTMLElementTagNameMap {
         "base-button": HTMLBaseButtonElement;
         "base-icon": HTMLBaseIconElement;
         "base-spacing": HTMLBaseSpacingElement;
         "content-wrapper": HTMLContentWrapperElement;
+        "multiple-components-playing-together": HTMLMultipleComponentsPlayingTogetherElement;
     }
 }
 declare namespace LocalJSX {
@@ -72,11 +87,20 @@ declare namespace LocalJSX {
         "constraintSize"?: string;
         "paddingSize"?: string;
     }
+    interface MultipleComponentsPlayingTogether {
+        "color"?: string;
+        "constraintSize"?: string;
+        "hasRoundedCorners"?: boolean;
+        "isDisabled"?: boolean;
+        "paddingSize"?: string;
+        "text"?: string;
+    }
     interface IntrinsicElements {
         "base-button": BaseButton;
         "base-icon": BaseIcon;
         "base-spacing": BaseSpacing;
         "content-wrapper": ContentWrapper;
+        "multiple-components-playing-together": MultipleComponentsPlayingTogether;
     }
 }
 export { LocalJSX as JSX };
@@ -87,6 +111,7 @@ declare module "@stencil/core" {
             "base-icon": LocalJSX.BaseIcon & JSXBase.HTMLAttributes<HTMLBaseIconElement>;
             "base-spacing": LocalJSX.BaseSpacing & JSXBase.HTMLAttributes<HTMLBaseSpacingElement>;
             "content-wrapper": LocalJSX.ContentWrapper & JSXBase.HTMLAttributes<HTMLContentWrapperElement>;
+            "multiple-components-playing-together": LocalJSX.MultipleComponentsPlayingTogether & JSXBase.HTMLAttributes<HTMLMultipleComponentsPlayingTogetherElement>;
         }
     }
 }
